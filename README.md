@@ -69,6 +69,19 @@ PORT        STATE       SERVICE
 
 ---
 
+### Kali Linux
+
+
+Nexorium Pulse tested and running successfully on Kali Linux.
+
+#### Open Port Detection
+
+![Nexorium Pulse detecting an open port on Kali Linux](screenshots/kali-open-port-scan.png)
+
+#### Closed Port Scan
+
+![Nexorium Pulse closed port scan on Kali Linux](screenshots/kali-closed-port-scan.png)
+
 ## Requirements
 
 - Python 3
