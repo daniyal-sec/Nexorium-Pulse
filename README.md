@@ -1,30 +1,71 @@
-# ⚡ Nexorium Pulse
+<p align="center">
+  <img src="assets/banner-pulse.svg" alt="Nexorium Pulse banner"/>
+</p>
 
-**Nexorium Pulse** is a lightweight, multithreaded TCP port scanner built in Python for network reconnaissance in authorized environments.
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=00FF7F&center=true&vCenter=true&width=750&lines=Multithreaded+TCP+Port+Scanning+in+Pure+Python;100+Workers+%C2%B7+Zero+Dependencies+%C2%B7+Cross-Platform;Scan.+Report.+Repeat." alt="Typing SVG"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-v1.0-00FF7F?style=for-the-badge" alt="version"/>
+  <img src="https://img.shields.io/badge/category-TCP%20Port%20Scanner-0d2818?style=for-the-badge" alt="category"/>
+  <img src="https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge" alt="license"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Multithreaded-04140d?style=for-the-badge" alt="Multithreaded"/>
+  <img src="https://img.shields.io/badge/Zero%20Dependencies-04140d?style=for-the-badge" alt="Zero Dependencies"/>
+  <img src="https://img.shields.io/badge/Cross--Platform-0d2818?style=for-the-badge" alt="Cross-Platform"/>
+</p>
+
+<p align="center">
+  <b>Nexorium Pulse</b> is a lightweight, multithreaded TCP port scanner built in Python for network reconnaissance in authorized environments.
+</p>
+
+---
+
+## 📑 Table of Contents
+
+- [📖 Overview](#overview)
+- [✨ Features](#features)
+- [🖥️ Preview](#preview)
+- [📋 Requirements](#requirements)
+- [⚙️ Installation](#installation)
+- [▶️ Usage](#usage)
+- [🧪 Example Local Test](#example-local-test)
+- [🧠 How It Works](#how-it-works)
+- [🔀 Concurrent Scanning](#concurrent-scanning)
+- [📊 Performance](#performance)
+- [🔎 Service Name Lookup](#service-name-lookup)
+- [📄 Scan Reports](#scan-reports)
+- [🧾 JSON Output](#json-output)
+- [📝 TXT Output](#txt-output)
+- [📁 Project Structure](#project-structure)
+- [🛑 Error Handling](#error-handling)
+- [🗺️ Roadmap](#roadmap)
+- [⚠️ Legal & Ethical Use](#legal--ethical-use)
+- [📜 License](#license)
+- [👤 Author](#author)
+- [🏷️ Version](#version)
+
+---
+
+## 📖 Overview
 
 The project was built from scratch as a cybersecurity and Python portfolio project, with a focus on concurrent scanning, clean terminal output, input validation, structured reporting, and cross-platform compatibility.
 
 ---
 
-## Features
+## ✨ Features
 
-- TCP connect port scanning
-- Multithreaded scanning with 100 workers
-- Custom TCP port ranges from `1–65535`
-- IP address validation
-- Socket timeout handling
-- Open and closed port statistics
-- Common TCP service-name lookup
-- Scan duration measurement
-- TXT report generation
-- JSON report generation
-- Graceful `Ctrl+C` cancellation
-- Cross-platform Python implementation
-- Zero third-party Python dependencies
+<p align="left">
+<img src="https://img.shields.io/badge/-TCP%20Connect%20Scanning-1B3B6F?style=flat-square"/> <img src="https://img.shields.io/badge/-Multithreaded%20(100%20Workers)-04140d?style=flat-square"/> <img src="https://img.shields.io/badge/-Custom%20Port%20Ranges%201--65535-0d2818?style=flat-square"/> <img src="https://img.shields.io/badge/-IP%20Address%20Validation-2E8B57?style=flat-square"/> <img src="https://img.shields.io/badge/-Socket%20Timeout%20Handling-1B3B6F?style=flat-square"/> <img src="https://img.shields.io/badge/-Open%2FClosed%20Port%20Statistics-04140d?style=flat-square"/> <img src="https://img.shields.io/badge/-TCP%20Service--Name%20Lookup-0d2818?style=flat-square"/> <img src="https://img.shields.io/badge/-Scan%20Duration%20Measurement-2E8B57?style=flat-square"/> <img src="https://img.shields.io/badge/-TXT%20Report%20Generation-1B3B6F?style=flat-square"/> <img src="https://img.shields.io/badge/-JSON%20Report%20Generation-04140d?style=flat-square"/> <img src="https://img.shields.io/badge/-Graceful%20Ctrl%2BC%20Cancellation-0d2818?style=flat-square"/> <img src="https://img.shields.io/badge/-Cross--Platform-2E8B57?style=flat-square"/> <img src="https://img.shields.io/badge/-Zero%20Third--Party%20Dependencies-1B3B6F?style=flat-square"/>
+</p>
 
 ---
 
-## Preview
+## 🖥️ Preview
 
 ```text
 ========================================================
@@ -67,10 +108,7 @@ PORT        STATE       SERVICE
 ========================================================
 ```
 
----
-
 ### Kali Linux
-
 
 Nexorium Pulse tested and running successfully on Kali Linux.
 
@@ -82,7 +120,9 @@ Nexorium Pulse tested and running successfully on Kali Linux.
 
 ![Nexorium Pulse closed port scan on Kali Linux](screenshots/kali-closed-port-scan.png)
 
-## Requirements
+---
+
+## 📋 Requirements
 
 - Python 3
 - Windows, Linux, or macOS
@@ -93,7 +133,7 @@ Nexorium Pulse uses only Python's standard library.
 
 ---
 
-## Installation
+## ⚙️ Installation
 
 ### Clone the Repository
 
@@ -109,7 +149,7 @@ cd Nexorium-Pulse
 
 ---
 
-## Usage
+## ▶️ Usage
 
 ### Windows
 
@@ -145,7 +185,7 @@ The port range must be between:
 
 ---
 
-## Example Local Test
+## 🧪 Example Local Test
 
 A simple controlled test can be performed on your own machine using Python's built-in HTTP server.
 
@@ -181,7 +221,7 @@ Running the same scan again should show that port `8000` is no longer open.
 
 ---
 
-## How It Works
+## 🧠 How It Works
 
 Nexorium Pulse performs TCP connection attempts using Python's `socket` module.
 
@@ -205,7 +245,7 @@ Scan    : TCP Connect
 
 ---
 
-## Concurrent Scanning
+## 🔀 Concurrent Scanning
 
 A sequential scanner checks ports approximately like this:
 
@@ -217,6 +257,13 @@ Port 2
 Port 3
   ↓
 Port 4
+```
+
+*Visual summary of the same flow:*
+
+```mermaid
+flowchart TD
+    P1["Port 1"] --> P2["Port 2"] --> P3["Port 3"] --> P4["Port 4"]
 ```
 
 Nexorium Pulse distributes port checks across a worker pool:
@@ -231,11 +278,23 @@ Nexorium Pulse distributes port checks across a worker pool:
       Port 1        Port 2        Port 3
 ```
 
+*Visual summary of the same flow:*
+
+```mermaid
+flowchart TD
+    TP["ThreadPoolExecutor"] --> W1["Worker 1"]
+    TP --> W2["Worker 2"]
+    TP --> W3["Worker 3"]
+    W1 --> Port1["Port 1"]
+    W2 --> Port2["Port 2"]
+    W3 --> Port3["Port 3"]
+```
+
 This significantly reduces scan duration when connection attempts would otherwise spend time waiting for network responses.
 
 ---
 
-## Performance
+## 📊 Performance
 
 Controlled local-network testing demonstrated the impact of increasing concurrency while maintaining the same `0.5` second socket timeout.
 
@@ -259,7 +318,7 @@ Actual performance depends on factors including:
 
 ---
 
-## Service Name Lookup
+## 🔎 Service Name Lookup
 
 When an open TCP port is discovered, Pulse attempts to determine its conventional service name using Python's local service database.
 
@@ -283,7 +342,7 @@ True application/service fingerprinting is outside the scope of Nexorium Pulse v
 
 ---
 
-## Scan Reports
+## 📄 Scan Reports
 
 After a completed scan, Nexorium Pulse automatically generates:
 
@@ -308,7 +367,7 @@ The `results/` directory is excluded from Git through `.gitignore` to prevent lo
 
 ---
 
-## JSON Output
+## 🧾 JSON Output
 
 Example:
 
@@ -332,7 +391,7 @@ JSON output allows scan results to be consumed by other programs or used in futu
 
 ---
 
-## TXT Output
+## 📝 TXT Output
 
 Example:
 
@@ -353,7 +412,7 @@ OPEN PORTS
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 Nexorium-Pulse/
@@ -379,7 +438,7 @@ The `results/` directory remains local and is ignored by Git.
 
 ---
 
-## Error Handling
+## 🛑 Error Handling
 
 Nexorium Pulse includes handling for:
 
@@ -400,18 +459,18 @@ Example:
 
 ---
 
-## Roadmap
+## 🗺️ Roadmap
 
 Possible future Nexorium Pulse releases may include:
 
-- Configurable worker count
-- Configurable socket timeout
-- Fast / Normal / Careful scan profiles
-- Command-line arguments
-- Improved service identification
-- Enhanced terminal presentation
-- Additional report formats
-- More detailed scan statistics
+- [ ] Configurable worker count
+- [ ] Configurable socket timeout
+- [ ] Fast / Normal / Careful scan profiles
+- [ ] Command-line arguments
+- [ ] Improved service identification
+- [ ] Enhanced terminal presentation
+- [ ] Additional report formats
+- [ ] More detailed scan statistics
 
 These features are intentionally outside the scope of version 1.0.
 
@@ -429,7 +488,7 @@ Users are responsible for ensuring that their use of Nexorium Pulse complies wit
 
 ---
 
-## License
+## 📜 License
 
 This project is licensed under the **MIT License**.
 
@@ -439,12 +498,23 @@ See the `LICENSE` file for the full license terms.
 
 ---
 
-## Author
+## 👤 Author
 
-Developed by **daniyal-sec** as part of a cybersecurity and Python portfolio.
+<p align="center">
+Developed by <b>daniyal-sec</b> as part of a cybersecurity and Python portfolio.
+</p>
+
+<p align="center">
+  <a href="https://github.com/daniyal-sec">
+    <img src="https://img.shields.io/badge/GitHub-daniyal--sec-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  <a href="https://github.com/daniyal-sec">
+    <img src="https://img.shields.io/github/followers/daniyal-sec?style=for-the-badge&label=Follow&color=00FF7F" alt="Follow"/>
+  </a>
+</p>
 
 ---
 
-## Version
+## 🏷️ Version
 
 **Nexorium Pulse v1.0**
